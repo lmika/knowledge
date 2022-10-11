@@ -1,2 +1,3 @@
-# knowledge
-Tech knowledge base
+# Knowledge
+
+Personal tech knowledge base.
