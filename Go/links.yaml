@@ -1,0 +1,8 @@
+type: links
+---
+title: emperror.dev/errors
+link-to: package
+href: https://pkg.go.dev/emperror.dev/errors
+description: |
+  Drop in replacement for the [github.com/pkg/errors](https://github.com/pkg/errors) package. The original package is archived as there's a plan to [change   how Go handles errors](https://go.googlesource.com/proposal/+/master/design/go2draft.md). But not all of us are ready to adopt this yet.
+---
