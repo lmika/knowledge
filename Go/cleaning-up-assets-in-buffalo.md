@@ -1,6 +1,6 @@
 ---
 title: Cleaning Up Assets in Buffalo
-type: howto
+type: post
 blog-post: https://lmika.org/2022/03/21/the.html
 ---
 

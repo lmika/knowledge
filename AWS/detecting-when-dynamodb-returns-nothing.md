@@ -1,6 +1,6 @@
 ---
 title: Detecting When GetItem On DynamoDB Returns Nothing
-type: howto
+type: post
 ---
 
 The best way to detect when a GetItem call to DynamoDB returns no values is to check that the returned `Item` field is `nil`:

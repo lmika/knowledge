@@ -1,6 +1,6 @@
 ---
 title: Showing a Specific Revision Of a File
-type: howto
+type: post
 ---
 
 To display the contents of a file at a given revision in Git, run the following command:

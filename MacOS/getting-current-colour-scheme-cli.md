@@ -1,6 +1,6 @@
 ---
 title: Getting the Current Colour Scheme from the CLI
-type: howto
+type: post
 blog-post: https://lmika.org/2022/10/04/the-annoying-way.html
 ---
 

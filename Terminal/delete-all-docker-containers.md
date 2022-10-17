@@ -1,6 +1,6 @@
 ---
 title: List and Delete All Docker Containers
-type: howto
+type: post
 blog-post: https://lmika.org/2022/06/27/a-useful-command.html
 ---
 
