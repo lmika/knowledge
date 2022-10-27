@@ -1,0 +1,44 @@
+name: Build Site
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  build-site:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Go
+        uses: actions/setup-go@v2
+        with:
+          go-version: 1.18
+      - name: Checkout Current Web
+        uses: actions/checkout@v3
+        with:
+          repository: lmika/tecknow-space-web
+          token: ${{secrets.API_TOKEN_GITHUB}}
+          path: tecknow-space-web
+      - name: Checkout Tool
+        uses: actions/checkout@v3
+        with:
+          repository: lmika/build-knowledge-web
+          token: ${{secrets.API_TOKEN_GITHUB}}
+          path: build-knowledge-web
+      - name: Build Tool
+        run: |
+          cd "$GITHUB_WORKSPACE/build-knowledge-web"
+          go build .
+      - name: Generate Site
+        run: |          
+          cd "$GITHUB_WORKSPACE/build-knowledge-web"
+          ./build-knowledge-web
+      - name: Push Site
+        run: |               
+          ( cd "$GITHUB_WORKSPACE/build-knowledge-web"/out ; cp -r * "$GITHUB_WORKSPACE/tecknow-space-web"/. )
+          cd "$GITHUB_WORKSPACE/tecknow-space-web/"
+          git add .
+          git config user.email "knowledge@tecknow.space"
+          git config user.name "Knowledge CI/CD"          
+          git commit -m 'Regenerated site'
+          git push origin main
