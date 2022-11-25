@@ -1,0 +1,20 @@
+---
+title: Packages
+type: links
+links-to: package
+---
+title: golang.org/x/time/rate
+href: https://pkg.go.dev/golang.org/x/time/rate
+description: |
+  Contains a simple token bucket rate limiter
+---
+title: emperror.dev/errors
+href: https://pkg.go.dev/emperror.dev/errors
+description: |
+  Drop in replacement for the [github.com/pkg/errors](https://github.com/pkg/errors) package. The original package is archived as there's a plan to [change   how Go handles errors](https://go.googlesource.com/proposal/+/master/design/go2draft.md). But not all of us are ready to adopt this yet.
+---
+title: github.com/jszwec/csvutil
+href: https://github.com/jszwec/csvutil
+description: |
+  Package for reading CSV files into structs similar to JSON and XML encoders.
+---
